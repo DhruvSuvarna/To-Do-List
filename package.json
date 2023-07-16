@@ -1,22 +1,22 @@
 {
-  "name": "nodejs-news",
+  "name": "todolist-v1",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a todolist(version-1.0)",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Raddy",
+  "author": "Dhruv Suvarna",
   "license": "ISC",
   "dependencies": {
-    "axios": ">=0.21.1",
-    "body-parser": "^1.19.0",
-    "ejs": "^3.1.5",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.1"
   }
 }

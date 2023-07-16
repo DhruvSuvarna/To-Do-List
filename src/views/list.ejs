@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("header") -%>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="box" id="heading" >
+        <h1><%= listTitle %></h1>
+    </div>
+    
+    <div class="box">
+        <form action="/delete" method="post">
+        <% newListItems.forEach((item)=>{ %>
+            <div class="item">
+                <input type="checkbox" name="checkbox" value="<%= item._id %>" onChange="this.form.submit()">
+                <p><%= item.name %></p>
+            </div>
+        <% }); %>   
+        <input type="text" name="listName" value="<%= listTitle %>" hidden>
+        </form>
+
+        <form class="item" action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" required autocomplete="off">
+            <button type="submit" name="list" value="<%= listTitle %>">+</button>
+        </form>
+    </div>
+
+    <div class="s box">
+        <form action="/createCl" method="post">
+            <h2>Create
+                <% if (listTitle.includes(",")) { %> 
+                your own 
+                <% } else { %>
+                another
+                <% } %>
+            custom TodoList!
+            </h2>
+            <input type="text" name="customListName" placeholder="Type it's name here" autocomplete="off">
+            <button type="submit" name="create">+</button>
+        </form>
+    </div>
+
+    <script>
+        particlesJS.load('particles-js', 'css/particlesjs-config.json', function() {
+          console.log('Particle.js loaded');
+        });
+    </script>
+</body>
+</html>
