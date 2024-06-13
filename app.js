@@ -6,7 +6,7 @@ const port = 5500;
 const app = express();
 
 //connection
-mongoose.connect("mongodb+srv://DhruvS2:Rudebhai293@cluster0.bk1ddh4.mongodb.net/Todolist_v2")
+mongoose.connect("ENTER YOUR MONGODB DATABASE LINK HERE")
 .then(()=>console.log("MongoDB connected"))
 .catch(err=>console.log("Mongo Err", err));
 
